@@ -114,7 +114,7 @@ public class PulsarBrokerStarter {
         try {
             bookieConf.loadConf(new File(bookieConfigFile).toURI().toURL());
             bookieConf.validate();
-            log.info("Using bookie configuration file {}", bookieConfigFile);
+            log.info("Using bookie configuration files {}", bookieConfigFile);
         } catch (MalformedURLException e) {
             log.error("Could not open configuration file: {}", bookieConfigFile, e);
             throw new IllegalArgumentException("Could not open configuration file");
